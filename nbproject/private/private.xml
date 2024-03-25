@@ -3,8 +3,10 @@
     <editor-bookmarks xmlns="http://www.netbeans.org/ns/editor-bookmarks/2" lastBookmarkId="0"/>
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
-            <file>file:/D:/java/OOP_KhoHang/src/GUI/DangNhap1.java</file>
-            <file>file:/D:/java/OOP_KhoHang/src/GUI/fDangNhap.java</file>
+            <file>file:/D:/java/OOP_KhoHang/src/DTO/tai_khoan.java</file>
+            <file>file:/D:/java/OOP_KhoHang/src/GUI/f_home.java</file>
+            <file>file:/D:/java/OOP_KhoHang/src/GUI/f_DangNhap.java</file>
+            <file>file:/D:/java/OOP_KhoHang/src/DAO/accessDB.java</file>
         </group>
     </open-files>
 </project-private>
