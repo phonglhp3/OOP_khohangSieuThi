@@ -29,14 +29,14 @@ public class tai_khoan {
         
     }
     public static boolean CheckAcc(String user, String pass){
-        String query = "SELECT * FROM tai_khoan WHERE ten_tai_khoan='"+user+"' and mat_khau = '"+pass+"'";
+//        String query = "SELECT * FROM tai_khoan WHERE ten_tai_khoan='"+user+"' and mat_khau = '"+pass+"'";   gggg
+        String query = "SELECT * FROM tai_khoan WHERE Ten_TK='"+user+"' and Mat_Khau = '"+pass+"'";
         try{
             accessDB.getInstance().open();
             ResultSet rs = accessDB.getInstance().excuteQuery(query);
             if(rs.next()){
                 return true;
             }
-            return false;
         }
         catch (SQLException e){
             accessDB.getInstance().displayError(e);
@@ -44,12 +44,11 @@ public class tai_khoan {
         return false;
     }
     public static int getLoai_TK(String user, String pass){
-        String query = "SELECT * FROM tai_khoan WHERE ten_tai_khoan='"+user+"' and mat_khau = '"+pass+"'";
+        String query = "SELECT * FROM tai_khoan WHERE Ten_TK='"+user+"' and Mat_Khau = '"+pass+"'";
         try{
-//            accessDB.getInstance().open();
             ResultSet rs = accessDB.getInstance().excuteQuery(query);
             if (rs.next()) {
-                return rs.getInt(6);
+                return rs.getInt(5);
             }
         }
         catch (SQLException e){
@@ -58,12 +57,12 @@ public class tai_khoan {
         return 0;
     }
     public static int getID_NV(String user, String pass){
-        String query = "SELECT * FROM tai_khoan WHERE ten_tai_khoan='"+user+"' and mat_khau = '"+pass+"'";
+        String query = "SELECT * FROM tai_khoan WHERE Ten_TK='"+user+"' and Mat_Khau = '"+pass+"'";
         try{
 //            accessDB.getInstance().open();
             ResultSet rs = accessDB.getInstance().excuteQuery(query);
             if (rs.next()) {
-                return rs.getInt(5);
+                return rs.getInt(4);
             }
         }
         catch (SQLException e){

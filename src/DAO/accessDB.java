@@ -65,7 +65,6 @@ public class accessDB{
         ResultSet rs = null;
         try{
             Statement stm = conn.createStatement();
-//            stm = conn.prepareStatement(sql);
             rs = stm.executeQuery(sql);
         }
         catch (SQLException e){
@@ -76,8 +75,20 @@ public class accessDB{
     public static void main(String args[]) {
         accessDB test = new accessDB();
         test.open();
-        test.close();
+//        test.close();
     }
+    
+    public int executeUpdate(String sql){
+    int result = 0;
+    try{
+        Statement stm = conn.createStatement();
+        result = stm.executeUpdate(sql);
+    }
+    catch (SQLException e){
+        displayError(e);
+    }
+    return result;
+}
  
  
     /**
@@ -88,7 +99,8 @@ public class accessDB{
      * @param userName: username is used to login
      * @param password: password is used to login
      * @return connection
-     */
+     */ 
+//    Connection conn = getConnection("jdbc:sqlserver://localhost:1433;databaseName=testdb;integratedSecurity=true", "sa","1234567890");
 //    public static Connection getConnection(String dbURL, String userName, 
 //            String password) {
 //        Connection conn = null;
