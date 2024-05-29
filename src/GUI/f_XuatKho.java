@@ -204,7 +204,7 @@ public class f_XuatKho extends javax.swing.JFrame {
                 {null, null, null, null, null, null}
             },
             new String [] {
-                "ID Xuất", "Thời Gian Xuất", "Tên Sản Phẩm", "Số Lượng Lô", "Nhân Viên Phụ Trách", ""
+                "ID Xuất", "Thời Gian Xuất", "Tên Sản Phẩm", "ID Lô", "Nhân Viên Phụ Trách", ""
             }
         ) {
             boolean[] canEdit = new boolean [] {
@@ -535,7 +535,7 @@ public class f_XuatKho extends javax.swing.JFrame {
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonSuaActionPerformed
     public void build() {
-        String sql="select id_phieu_xuat,thoi_gian_xuat,ten_sp,so_luong_lo,ten_nv from phieu_xuat_kho join lo_san_pham on phieu_xuat_kho.ID_Lo=lo_san_pham.ID_Lo join san_pham on lo_san_pham.id_sp=san_pham.id_sp join phieu_nhap on lo_san_pham.ID_Phieu_Nhap=phieu_nhap.ID_Phieu_Nhap join nhan_vien on phieu_nhap.id_nv=nhan_vien.id_nv;";
+        String sql="select id_phieu_xuat,thoi_gian_xuat,ten_sp,phieu_xuat_kho.ID_Lo,ten_nv from phieu_xuat_kho join lo_san_pham on phieu_xuat_kho.ID_Lo=lo_san_pham.ID_Lo join san_pham on lo_san_pham.id_sp=san_pham.id_sp join phieu_nhap on lo_san_pham.ID_Phieu_Nhap=phieu_nhap.ID_Phieu_Nhap join nhan_vien on phieu_nhap.id_nv=nhan_vien.id_nv;";
         DefaultTableModel model = (DefaultTableModel) jTableXuatKho.getModel();
         accessDB.getInstance().open();
         ResultSet rs = accessDB.getInstance().excuteQuery(sql);

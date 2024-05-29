@@ -193,7 +193,7 @@
                         <Column editable="false" title="ID Xu&#x1ea5;t" type="java.lang.Object"/>
                         <Column editable="false" title="Th&#x1edd;i Gian Xu&#x1ea5;t" type="java.lang.Object"/>
                         <Column editable="false" title="T&#xea;n S&#x1ea3;n Ph&#x1ea9;m" type="java.lang.Object"/>
-                        <Column editable="false" title="S&#x1ed1; L&#x1b0;&#x1ee3;ng L&#xf4;" type="java.lang.Object"/>
+                        <Column editable="false" title="ID L&#xf4;" type="java.lang.Object"/>
                         <Column editable="false" title="Nh&#xe2;n Vi&#xea;n Ph&#x1ee5; Tr&#xe1;ch" type="java.lang.Object"/>
                         <Column editable="false" title="" type="java.lang.Object"/>
                       </Table>
