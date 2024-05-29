@@ -78,36 +78,13 @@ public class f_kiemKe extends javax.swing.JFrame {
         build();
     }
 
-    public void NhanVienDangNhap() {
-        if (id_nv != 0) {
-            String sql="SELECT Ten_NV " +
-                        "FROM nhan_vien " +
-                        "INNER JOIN Tai_Khoan ON Nhan_Vien.ID_NV = Tai_Khoan.ID_NV " +
-                        "WHERE Nhan_Vien.ID_NV = "+id_nv;
-            
-            try {
-                DAO.accessDB.getInstance().open();
-                ResultSet rs = accessDB.getInstance().excuteQuery(sql);
-                rs.next();
-                jComboBoxNhanVien2.addItem(rs.getString(1));
-                jComboBoxNhanVien2.addItem("Thông tin");
-                jComboBoxNhanVien2.addItem("Đổi mật khẩu");
-                jComboBoxNhanVien2.addItem("Thoát");
-                
-            } catch (Exception e) {
-               e.printStackTrace();
-            }             
-        } else {
-            jComboBoxNhanVien2.addItem("Chưa đăng nhập");
-        }
-    }
+
     private void setIcon() {
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/icon/rsz_iconsieuthi.png")));
     }
 
     public void build() {
 //         String sql="SELECT ID_KV, Ten_SP,(SELECT COUNT(*) AS Lo_Ton FROM Lo_San_Pham WHERE ID_KV=Khu_Vuc.ID_KV), ID_NV FROM (San_Pham JOIN Lo_San_Pham ON San_Pham.ID_SP=Lo_San_Pham.ID_SP) AS TG JOIN Khu_Vuc ON TG.ID_KV=Khu_Vuc.ID_KV";
-        NhanVienDangNhap();
         String sql="SELECT * FROM Phieu_Kiem_Ke_KV";
         accessDB.getInstance().open();
         ResultSet rs = accessDB.getInstance().excuteQuery(sql);
@@ -249,7 +226,6 @@ public class f_kiemKe extends javax.swing.JFrame {
         jButton1 = new javax.swing.JButton();
         jTextFieldTimKiem = new javax.swing.JTextField();
         jButtonTaiLai = new javax.swing.JButton();
-        jComboBoxNhanVien2 = new javax.swing.JComboBox<>();
         jPanel4 = new javax.swing.JPanel();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator3 = new javax.swing.JSeparator();
@@ -662,13 +638,6 @@ public class f_kiemKe extends javax.swing.JFrame {
                 .addContainerGap())
         );
 
-        jComboBoxNhanVien2.setFont(new java.awt.Font("Tahoma", 0, 14)); // NOI18N
-        jComboBoxNhanVien2.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                jComboBoxNhanVien2ActionPerformed(evt);
-            }
-        });
-
         jButton3.setFont(new java.awt.Font("Tahoma", 1, 14)); // NOI18N
         jButton3.setIcon(new javax.swing.ImageIcon(getClass().getResource("/icon/icons8-waste-48.png"))); // NOI18N
         jButton3.setText("Xóa");
@@ -739,8 +708,7 @@ public class f_kiemKe extends javax.swing.JFrame {
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addContainerGap()
                         .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 350, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                        .addComponent(jComboBoxNhanVien2, javax.swing.GroupLayout.PREFERRED_SIZE, 163, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGap(0, 0, Short.MAX_VALUE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addComponent(jPanel2, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
@@ -751,9 +719,7 @@ public class f_kiemKe extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addComponent(jLabel1)
-                    .addComponent(jComboBoxNhanVien2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addComponent(jLabel1)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(jLabel2)
                 .addGap(23, 23, 23)
@@ -814,20 +780,6 @@ public class f_kiemKe extends javax.swing.JFrame {
 //        jLabelTrang.setText("" + SoTrang);
 //        jLabelSoTrang.setText(SoTrang + "/" + SoTrang);
     }//GEN-LAST:event_jButtonLonMaxActionPerformed
-
-    private void jComboBoxNhanVien2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jComboBoxNhanVien2ActionPerformed
-        String valueIn = String.valueOf(jComboBoxNhanVien2.getSelectedItem());
-        if ("Thoát".equals(valueIn)) {
-            JFrame dn = new f_home(id_nv);
-            dn.setVisible(true);
-            dispose();
-        }
-        if ("Thông tin".equals(valueIn)) {
-            JFrame nv = new fViewNhanVien(id_nv, id_nv);
-            nv.setVisible(true);
-        }
-        jComboBoxNhanVien2.setSelectedIndex(0);
-    }//GEN-LAST:event_jComboBoxNhanVien2ActionPerformed
 
     private void jButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButton1ActionPerformed
 //        DanhSach = DuLieuMau;
@@ -1009,7 +961,6 @@ public class f_kiemKe extends javax.swing.JFrame {
     private javax.swing.JButton jButtonNho;
     private javax.swing.JButton jButtonNhoMax;
     private javax.swing.JButton jButtonTaiLai;
-    private javax.swing.JComboBox<String> jComboBoxNhanVien2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabelKetQua;

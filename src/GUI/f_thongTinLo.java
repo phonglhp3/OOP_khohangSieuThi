@@ -20,7 +20,7 @@ public class f_thongTinLo extends javax.swing.JFrame {
      */
     public void build(){
         accessDB.getInstance().open();
-        String sql="select id_lo,so_luong_sp,ten_sp,so_tien_sp,nsx,hsd,lo_san_pham.id_kv from lo_san_pham join san_pham on lo_san_pham.id_sp=san_pham.id_sp join khu_vuc on lo_san_pham.id_kv=khu_vuc.id_kv;";
+        String sql="select id_lo,so_luong_sp,ten_sp,so_tien_sp,nsx,hsd,lo_san_pham.id_kv from lo_san_pham join san_pham on lo_san_pham.id_sp=san_pham.id_sp join khu_vuc on lo_san_pham.id_kv=khu_vuc.id_kv where so_luong_sp!=-1;";
         ResultSet rs = accessDB.getInstance().excuteQuery(sql);
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
         // Gán giá trị cho bang

@@ -355,7 +355,7 @@ public class f_CreateTraHang extends javax.swing.JFrame {
         String max_id_tra="SELECT * FROM phieu_tra_hang WHERE id_tra = (SELECT MAX(id_tra) FROM phieu_tra_hang);";
         ResultSet rs = accessDB.getInstance().excuteQuery(max_id_tra);
         int id_tra=1,id_nv=f_DangNhap.id_nv,id_lo=Integer.parseInt(jTextField2.getText());
-        String thoi_gian_tra=jTextField5.getText(),mo_ta=jTextField10.getText();       
+        String thoi_gian_tra=jTextField8.getText(),mo_ta=jTextField10.getText();       
         try {
             if(rs.next()) id_tra=rs.getInt(1)+1;
         } catch (SQLException ex) {
@@ -363,11 +363,11 @@ public class f_CreateTraHang extends javax.swing.JFrame {
         }
         String sql="INSERT INTO phieu_tra_hang (id_tra, thoi_gian_tra, mo_ta,id_nv, id_lo) VALUES ('"+id_tra+"', '"+thoi_gian_tra+"', '"+mo_ta+"','"+id_nv+"','"+id_lo+"');";
         accessDB.getInstance().executeUpdate(sql);
-        sql="delete from phieu_tra_hang where id_lo='"+id_lo+"';";
-        accessDB.getInstance().executeUpdate(sql);
-        sql="delete from chi_tiet_kiem_ke where id_lo='"+id_lo+"';";
-        accessDB.getInstance().executeUpdate(sql);
-        sql="delete from lo_san_pham where id_lo='"+id_lo+"';";
+//        sql="delete from phieu_tra_hang where id_lo='"+id_lo+"';";
+//        accessDB.getInstance().executeUpdate(sql);
+//        sql="delete from chi_tiet_kiem_ke where id_lo='"+id_lo+"';";
+//        accessDB.getInstance().executeUpdate(sql);
+        sql="UPDATE lo_san_pham SET so_luong_sp = -1 WHERE id_lo = "+id_lo+";";
         accessDB.getInstance().executeUpdate(sql);
         JOptionPane.showMessageDialog(rootPane, "Trả hàng thành công");
         dispose();

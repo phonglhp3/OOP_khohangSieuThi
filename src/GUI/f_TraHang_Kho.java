@@ -34,7 +34,7 @@ public class f_TraHang_Kho extends javax.swing.JFrame {
     public void build(){
         jButton2.setEnabled(false);
         DefaultTableModel model = (DefaultTableModel) jTable2.getModel();
-        String sql="select id_lo,ten_nha_cc,ten_sp,so_luong_Sp from lo_san_pham join phieu_nhap on lo_san_pham.id_phieu_nhap=phieu_nhap.id_phieu_nhap join nguon_cc on nguon_cc.id_cc=Phieu_nhap.id_cc join san_pham on san_pham.id_sp=lo_san_pham.id_sp;";                                                                                           
+        String sql="select id_lo,ten_nha_cc,ten_sp,so_luong_Sp from lo_san_pham join phieu_nhap on lo_san_pham.id_phieu_nhap=phieu_nhap.id_phieu_nhap join nguon_cc on nguon_cc.id_cc=Phieu_nhap.id_cc join san_pham on san_pham.id_sp=lo_san_pham.id_sp where so_luong_sp!=-1;";                                                                                           
         int i=0;
         accessDB.getInstance().open();
         ResultSet rs=accessDB.getInstance().excuteQuery(sql);

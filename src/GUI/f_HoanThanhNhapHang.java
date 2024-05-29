@@ -5,7 +5,7 @@
  */
 package GUI;
 
-import minh.*;
+import DAO.accessDB;
 import DAO.NhapKho;
 import GROUP.ThongTinNhap;
 import java.awt.GraphicsConfiguration;
@@ -16,7 +16,10 @@ import javax.swing.JLabel;
 import javax.swing.JOptionPane;
 import javax.swing.JPanel;
 import java.lang.*;
-import java.util.Date;
+import java.sql.ResultSet;
+import java.util.Date.*;
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;;
 
 /**
  *
@@ -27,15 +30,33 @@ public class f_HoanThanhNhapHang extends javax.swing.JFrame {
     /**
      * Creates new form fHoanThanh_NhapHang
      */
-    public int id_phieu_nhap,id_nv,id_cc;
-    public Date thoi_gian,hsd,nsx;
-    public int id_lo,so_tien_SP,so_luong_SP,so_tien_lo;
+    public int id_phieu_nhap,id_nv,id_cc,id_sp;
+    public LocalDate thoi_gian,hsd,nsx;
+    public int id_lo,so_tien_SP,so_luong_SP,so_tien_lo,so_luong_lo;
     public String id_kv;
 
 
         
     public f_HoanThanhNhapHang() {
         
+    }
+
+    f_HoanThanhNhapHang(int id_phieu_nhap, int id_nv, int id_sp, int id_cc, LocalDate thoi_gian, LocalDate hsd, LocalDate nsx, int id_lo, int so_tien_SP, int so_luong_SP, int so_tien_lo, int so_luong_lo, String id_kv) {
+        this.id_phieu_nhap=id_phieu_nhap;
+        this.id_nv=id_nv;
+        this.id_sp=id_sp;
+        this.id_cc=id_cc;
+        this.thoi_gian=thoi_gian;
+        this.hsd=hsd;
+        this.nsx=nsx;
+        this.id_lo=id_lo;
+        this.so_tien_SP=so_tien_SP;
+        this.so_luong_SP=so_luong_SP;
+        this.so_tien_lo=so_tien_lo;
+        this.so_luong_lo=so_luong_lo;
+        this.id_kv=id_kv;
+        initComponents();
+        setIcon();
     }
     private void setIcon() {
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/icon/Logo2.png")));
@@ -218,16 +239,22 @@ public class f_HoanThanhNhapHang extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void jButtonLuuVaThoatMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonLuuVaThoatMouseClicked
-         String sql=""
+         String sql="INSERT INTO phieu_nhap (id_phieu_nhap, thoi_gian, id_nv, id_cc,so_luong_lo_nhap) VALUES ("+id_phieu_nhap+",'"+thoi_gian+"',"+id_nv+","+id_cc+","+so_luong_lo+");";
+         accessDB.getInstance().open();
+         accessDB.getInstance().executeUpdate(sql);
+         for(int i=0;i<so_luong_lo;i++){
+            sql="insert into lo_san_pham (id_lo,hsd,nsx,id_sp,so_luong_sp,so_tien_sp,id_phieu_nhap,id_kv,so_tien_lo) values ("+(id_lo+i)+",'"+hsd+"','"+nsx+"',"+id_sp+","+so_luong_SP+","+so_tien_SP+","+id_phieu_nhap+",'"+id_kv+"',"+so_tien_lo+");";
+            accessDB.getInstance().executeUpdate(sql);
+         }
         JOptionPane.showMessageDialog(rootPane,
             "Đã lưu thông tin phiếu nhập thành công.",
             "Thông báo",
             JOptionPane.INFORMATION_MESSAGE);
+        dispose();
     }//GEN-LAST:event_jButtonLuuVaThoatMouseClicked
 
     private void jLabel3MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel3MousePressed
-//        JFrame TrangChu = new fHome(id_nv);
-//        TrangChu.setVisible(true);
+
         dispose();
     }//GEN-LAST:event_jLabel3MousePressed
 
@@ -237,6 +264,7 @@ public class f_HoanThanhNhapHang extends javax.swing.JFrame {
 
     private void jButtonLuuVaThoatActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLuuVaThoatActionPerformed
         // TODO add your handling code here:
+        
     }//GEN-LAST:event_jButtonLuuVaThoatActionPerformed
 
     /**

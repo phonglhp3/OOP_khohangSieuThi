@@ -40,6 +40,7 @@ public class f_DanhSachNhapHang extends javax.swing.JFrame {
     public f_DanhSachNhapHang(int id_nv) {
         initComponents();
         setIcon();
+        build();
         this.id_nv = id_nv;
 
     }
@@ -182,109 +183,109 @@ public class f_DanhSachNhapHang extends javax.swing.JFrame {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "ID Lô", "Tên Sản Phẩm", "Thời Gian Nhập", "Giá Lô", "Giá Sản Phẩm", "Nhân Viên Phụ Trách"
+                "ID_phieu_nhap", "Số Lượng Lô Nhập", "Tên Sản Phẩm", "Thời Gian Nhập", "Giá Lô", "Giá Sản Phẩm", "Nhân Viên Phụ Trách"
             }
         ));
         jScrollPane2.setViewportView(jTable1);
@@ -492,9 +493,9 @@ public class f_DanhSachNhapHang extends javax.swing.JFrame {
     }//GEN-LAST:event_jTextFieldTimKiemKeyReleased
 
     private void jButtonLamMoiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonLamMoiActionPerformed
-        invalidate();
-        validate();
-        repaint();
+//        invalidate();
+//        validate();
+//        repaint();
         build();
         // TODO add your handling code here:
     }//GEN-LAST:event_jButtonLamMoiActionPerformed
@@ -592,7 +593,7 @@ public class f_DanhSachNhapHang extends javax.swing.JFrame {
     }
 
     public void build() {
-        String sql="select id_lo, ten_sp,thoi_gian,so_tien_lo,so_tien_sp,ten_NV from lo_san_pham join phieu_nhap on lo_san_pham.id_phieu_nhap=phieu_nhap.ID_Phieu_Nhap join san_pham on lo_san_pham.id_sp= san_pham.id_sp join nhan_vien on phieu_nhap.id_nv=nhan_vien.id_nv;";
+        String sql="select phieu_nhap.id_phieu_nhap,so_luong_lo_nhap, ten_sp,thoi_gian,so_tien_lo,so_tien_sp,ten_NV from phieu_nhap join lo_san_pham on phieu_nhap.id_phieu_nhap=lo_san_pham.ID_Phieu_Nhap join san_pham on lo_san_pham.id_sp= san_pham.id_sp join nhan_vien on phieu_nhap.id_nv=nhan_vien.id_nv group by phieu_nhap.id_phieu_nhap, so_luong_lo_nhap, ten_sp, thoi_gian, so_tien_lo, so_tien_sp, ten_NV;";
         accessDB.getInstance().open();
         ResultSet rs = accessDB.getInstance().excuteQuery(sql);
         DefaultTableModel model = (DefaultTableModel) jTable1.getModel();
@@ -600,11 +601,13 @@ public class f_DanhSachNhapHang extends javax.swing.JFrame {
         try {
             while(rs.next()){
                 model.setValueAt(rs.getInt(1), i, 0);
-                model.setValueAt(rs.getString(2), i, 1);
-                model.setValueAt(rs.getDate(3), i, 2);
-                model.setValueAt(rs.getInt(4), i, 3);
+                model.setValueAt(rs.getInt(2), i, 1);
+                model.setValueAt(rs.getString(3), i, 2);
+                model.setValueAt(rs.getDate(4), i, 3);
                 model.setValueAt(rs.getInt(5), i, 4);
-                model.setValueAt(rs.getString(6), i, 5);
+                model.setValueAt(rs.getInt(6), i, 5);
+                model.setValueAt(rs.getString(7), i, 6);
+                i++;
             }
         } catch (Exception e) {
             e.printStackTrace();
@@ -612,18 +615,6 @@ public class f_DanhSachNhapHang extends javax.swing.JFrame {
 
     }
 
-
-    public void NhanVienDangNhap() {
-//        if (id_nv != 0) {
-//            TaiKhoan tk = DAO.daoTaiKhoan.getInstance().getTaiKhoan(id_nv);
-//            NhanVien nv = DAO.daoTaiKhoan.getInstance().getNhanVien(tk.id_nv);
-//            jComboBoxNhanVien.addItem(nv.ten_nv);
-//            jComboBoxNhanVien.addItem("Thông tin");
-//            jComboBoxNhanVien.addItem("Thoát");
-//        } else {
-//            jComboBoxNhanVien.addItem("Chưa đăng nhập");
-//        }
-    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JButton jButtonHuy;

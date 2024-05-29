@@ -671,7 +671,10 @@ public class f_home extends javax.swing.JFrame {
     }//GEN-LAST:event_jComboBoxNhanVienActionPerformed
 
     private void jButtonTraBaoCaoUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonTraBaoCaoUpActionPerformed
-      
+        f_baoCao baoCao = new f_baoCao();
+        baoCao.setLocationRelativeTo(null);
+        baoCao.setVisible(true);
+        baoCao.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_jButtonTraBaoCaoUpActionPerformed
 
     private void jButtonNhapHangMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jButtonNhapHangMouseClicked
@@ -828,8 +831,10 @@ public class f_home extends javax.swing.JFrame {
     }//GEN-LAST:event_jButtonNhapHangActionPerformed
 
     private void jButtonXuatKhoUpActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonXuatKhoUpActionPerformed
-    
-
+        f_XuatKho xuatKho = new f_XuatKho(f_DangNhap.id_nv);
+        xuatKho.setLocationRelativeTo(null);
+        xuatKho.setVisible(true);
+        xuatKho.setDefaultCloseOperation(JFrame.DISPOSE_ON_CLOSE);
     }//GEN-LAST:event_jButtonXuatKhoUpActionPerformed
 
     private void jLabelThongBao2MouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabelThongBao2MouseClicked

@@ -423,7 +423,17 @@ public class f_ChonNhaCungCapNhapHang extends javax.swing.JFrame {
             "Thông báo",
             JOptionPane.ERROR_MESSAGE);
         }else{
-            f_ThongTinLoNhapHang thongTinLoNhap = new f_ThongTinLoNhapHang(); 
+            DefaultTableModel model = (DefaultTableModel) jTableNguonCC.getModel();
+            int id_lo=1;
+            String sql="SELECT MAX(id_lo)  FROM lo_san_pham";
+            accessDB.getInstance().open();
+            ResultSet rs = accessDB.getInstance().excuteQuery(sql);
+            try {
+                rs.next();
+                id_lo=rs.getInt(1)+1;
+            } catch (Exception e) {
+            }
+            f_ThongTinLoNhapHang thongTinLoNhap = new f_ThongTinLoNhapHang(f_DangNhap.id_nv,id_sp,id_lo,(int)model.getValueAt(jTableNguonCC.getSelectedRow(), 0),so_tien_lo,so_luong_lo); 
             thongTinLoNhap.setVisible(true);
             thongTinLoNhap.setLocationRelativeTo(null);
             dispose();
@@ -445,8 +455,7 @@ public class f_ChonNhaCungCapNhapHang extends javax.swing.JFrame {
     }//GEN-LAST:event_formWindowClosing
 
     private void jButtonQuayLaiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonQuayLaiActionPerformed
-        JFrame ChonSanPham = new fChonSanPham_NhapHang(id_nv);
-        ChonSanPham.setVisible(true);
+
         dispose();
     }//GEN-LAST:event_jButtonQuayLaiActionPerformed
 

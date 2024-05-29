@@ -24,18 +24,20 @@ import java.sql.ResultSet;
  */
 public class f_ChonSanPhamNhapHang extends javax.swing.JFrame {
     public int id_nv;
-    public int id_sp;
+    public static int id_sp;
     /**
-     * Creates new form fChonSanPham_NhapHang
+  
      */
     public f_ChonSanPhamNhapHang() {
     }
     public f_ChonSanPhamNhapHang(int id_nv) {
         initComponents();
         setIcon();
-        build();
         this.id_nv = id_nv;
-        this.id_sp = 0; // cho chọn san pham tiep tuc
+//        this.id_sp = id_sp; t9999
+        build();
+         // cho chọn san pham tiep tuc
+//         System.err.println("hello: "+id_sp); t9999
     }
     private void setIcon(){
         setIconImage(Toolkit.getDefaultToolkit().getImage(getClass().getResource("/icon/Logo2.png")));
@@ -470,9 +472,11 @@ public class f_ChonSanPhamNhapHang extends javax.swing.JFrame {
             JOptionPane.ERROR_MESSAGE);
         }else{
             f_ChonNhaCungCapNhapHang NhaCungCap = new f_ChonNhaCungCapNhapHang(id_nv,id_sp); //t9999 td_nv, id_sp
+            System.err.println("heloo: "+id_sp);
             NhaCungCap.setVisible(true);
             NhaCungCap.setLocationRelativeTo(null);
             dispose();
+            
         }
     }//GEN-LAST:event_jButtonChonSanPhamTiepTucActionPerformed
 
@@ -485,7 +489,7 @@ public class f_ChonSanPhamNhapHang extends javax.swing.JFrame {
     }//GEN-LAST:event_jTableSanPhamMousePressed
 
     private void jButtonQuayLạiActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jButtonQuayLạiActionPerformed
-
+        dispose();
     }//GEN-LAST:event_jButtonQuayLạiActionPerformed
 
     private void jLabel13MousePressed(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jLabel13MousePressed

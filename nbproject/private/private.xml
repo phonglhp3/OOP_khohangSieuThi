@@ -5,48 +5,54 @@
         <group>
             <file>file:/D:/java/OOP_KhoHang/src/GUI/f_ViewNhanVien.java</file>
             <file>file:/D:/java/OOP_KhoHang/src/minh/fChonSanPham_NhapHang.java</file>
-            <file>file:/D:/java/OOP_KhoHang/src/GUI/f_PassReset.java</file>
-            <file>file:/D:/java/OOP_KhoHang/src/icon/icons8-plus-40.png</file>
             <file>file:/D:/java/OOP_KhoHang/src/GUI/f_home.java</file>
             <file>file:/D:/java/OOP_KhoHang/src/bao/f_TraHangLoi.java</file>
-            <file>file:/D:/java/OOP_KhoHang/src/minh/fThongTinLo_NhapHang.java</file>
             <file>file:/D:/java/OOP_KhoHang/src/phong/f_printphieuxuat.java</file>
             <file>file:/D:/java/OOP_KhoHang/src/BUS/Main.java</file>
-            <file>file:/D:/java/OOP_KhoHang/src/phong/f_xuatkho.java</file>
-            <file>file:/D:/java/OOP_KhoHang/src/minh/fChonNhaCungCap_NhapHang.java</file>
             <file>file:/D:/java/OOP_KhoHang/src/DAO/accessDB.java</file>
-            <file>file:/D:/java/OOP_KhoHang/src/bao/f_CreatePhieuTraHang.java</file>
             <file>file:/D:/java/OOP_KhoHang/src/GUI/f_ChonSanPhamNhapHang.java</file>
-            <file>file:/D:/java/OOP_KhoHang/src/bao/f_PrintPhieuTra.java</file>
             <file>file:/D:/java/OOP_KhoHang/src/minh/fDanhSach_NhapHang.java</file>
             <file>file:/D:/java/OOP_KhoHang/src/GUI/f_TraHang_Kho.java</file>
             <file>file:/D:/java/OOP_KhoHang/src/bao/f_TraHang_Kho1.java</file>
-            <file>file:/D:/java/OOP_KhoHang/src/GUI/f_DangNhap.java</file>
-            <file>file:/D:/java/OOP_KhoHang/src/icon/icons8-message-30.png</file>
+            <file>file:/D:/java/OOP_KhoHang/src/GUI/f_XuatKho.java</file>
             <file>file:/D:/java/OOP_KhoHang/src/GUI/f_chiTietKiemKe.java</file>
             <file>file:/D:/java/OOP_KhoHang/src/giang/fThongtinnhap2.java</file>
-            <file>file:/D:/java/OOP_KhoHang/src/bao/f_CreateTraHang2.java</file>
             <file>file:/D:/java/OOP_KhoHang/src/giang/jNhaCungCap2.java</file>
-            <file>file:/D:/java/OOP_KhoHang/src/minh/fViewThongTinNhap.java</file>
-            <file>file:/D:/java/OOP_KhoHang/src/GUI/f_DanhSachNhapHang.java</file>
             <file>file:/D:/java/OOP_KhoHang/src/GUI/f_kiemKe.java</file>
-            <file>file:/D:/java/OOP_KhoHang/src/DTO/tai_khoan.java</file>
-            <file>file:/D:/java/OOP_KhoHang/src/DTO/danhSachLoSanPham.java</file>
             <file>file:/D:/java/OOP_KhoHang/src/GUI/f_nhapKho.java</file>
             <file>file:/D:/java/OOP_KhoHang/src/minh/fHoanThanh_NhapHang.java</file>
             <file>file:/D:/java/OOP_KhoHang/src/icon/rsz_iconsieuthi.png</file>
             <file>file:/D:/java/OOP_KhoHang/src/phong/f_taophieuxuatkho.java</file>
-            <file>file:/D:/java/OOP_KhoHang/src/GUI/f_LoSanPham.java</file>
-            <file>file:/D:/java/OOP_KhoHang/src/GUI/f_thongTinLo.java</file>
-            <file>file:/D:/java/OOP_KhoHang/src/BUS/Find.java</file>
+            <file>file:/D:/java/OOP_KhoHang/src/GUI/f_HoanThanhNhapHang.java</file>
             <file>file:/D:/java/OOP_KhoHang/src/GUI/f_SanPham.java</file>
             <file>file:/D:/java/OOP_KhoHang/src/GUI/f_CreateTraHang.java</file>
             <file>file:/D:/java/OOP_KhoHang/src/GUI/f_ChonNhaCungCapNhapHang.java</file>
             <file>file:/D:/java/OOP_KhoHang/src/minh/fNhapHang.java</file>
-            <file>file:/D:/java/OOP_KhoHang/src/GUI/f_TraHang_Ncc.java</file>
             <file>file:/D:/java/OOP_KhoHang/src/bao/f_TraHang_Ncc0.java</file>
-            <file>file:/D:/java/OOP_KhoHang/src/GUI/f_themKiemKe.java</file>
             <file>file:/D:/java/OOP_KhoHang/src/minh/fPrintThongTinNhap.java</file>
+            <file>file:/D:/java/OOP_KhoHang/src/GUI/f_PassReset.java</file>
+            <file>file:/D:/java/OOP_KhoHang/src/icon/icons8-plus-40.png</file>
+            <file>file:/D:/java/OOP_KhoHang/src/minh/fThongTinLo_NhapHang.java</file>
+            <file>file:/D:/java/OOP_KhoHang/src/phong/f_xuatkho.java</file>
+            <file>file:/D:/java/OOP_KhoHang/src/minh/fChonNhaCungCap_NhapHang.java</file>
+            <file>file:/D:/java/OOP_KhoHang/src/bao/f_CreatePhieuTraHang.java</file>
+            <file>file:/D:/java/OOP_KhoHang/src/bao/f_PrintPhieuTra.java</file>
+            <file>file:/D:/java/OOP_KhoHang/src/GUI/HOADONXUAT.java</file>
+            <file>file:/D:/java/OOP_KhoHang/src/GUI/f_DangNhap.java</file>
+            <file>file:/D:/java/OOP_KhoHang/src/icon/icons8-message-30.png</file>
+            <file>file:/D:/java/OOP_KhoHang/src/bao/f_CreateTraHang2.java</file>
+            <file>file:/D:/java/OOP_KhoHang/src/minh/fViewThongTinNhap.java</file>
+            <file>file:/D:/java/OOP_KhoHang/src/GUI/f_ThongTinLoNhapHang.java</file>
+            <file>file:/D:/java/OOP_KhoHang/src/GUI/f_DanhSachNhapHang.java</file>
+            <file>file:/D:/java/OOP_KhoHang/src/GUI/f_baoCao.java</file>
+            <file>file:/D:/java/OOP_KhoHang/src/DTO/tai_khoan.java</file>
+            <file>file:/D:/java/OOP_KhoHang/src/DTO/danhSachLoSanPham.java</file>
+            <file>file:/D:/java/OOP_KhoHang/src/GUI/f_CreatePhieuXuat.java</file>
+            <file>file:/D:/java/OOP_KhoHang/src/GUI/f_LoSanPham.java</file>
+            <file>file:/D:/java/OOP_KhoHang/src/GUI/f_thongTinLo.java</file>
+            <file>file:/D:/java/OOP_KhoHang/src/BUS/Find.java</file>
+            <file>file:/D:/java/OOP_KhoHang/src/GUI/f_TraHang_Ncc.java</file>
+            <file>file:/D:/java/OOP_KhoHang/src/GUI/f_themKiemKe.java</file>
         </group>
     </open-files>
 </project-private>

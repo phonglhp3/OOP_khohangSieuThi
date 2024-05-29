@@ -23,7 +23,7 @@ public class f_TraHang_Ncc extends javax.swing.JFrame {
     private int id_nv;
     public void build(){
         accessDB.getInstance().open();
-        String sql="select * from phieu_tra_hang;";
+        String sql="select id_tra,thoi_gian_tra,ten_nha_CC,ten_sp,so_luong_sp,ten_nv from phieu_tra_hang join nhan_vien on phieu_tra_hang.id_nv=nhan_vien.ID_NV join phieu_nhap on nhan_vien.id_nv=phieu_nhap.ID_NV join nguon_cc on phieu_nhap.ID_CC=nguon_cc.id_cc join lo_san_pham on phieu_nhap.id_phieu_nhap=lo_san_pham.id_phieu_nhap join san_pham on lo_san_pham.id_sp=san_pham.id_sp where so_luong_sp!=-1;";
         ResultSet rs = accessDB.getInstance().excuteQuery(sql);
         DefaultTableModel model = (DefaultTableModel) jTable_TraCC.getModel();
         try {
@@ -31,44 +31,12 @@ public class f_TraHang_Ncc extends javax.swing.JFrame {
             while(rs.next()){
                 model.setValueAt(rs.getInt(1), i, 0);
                 model.setValueAt(rs.getDate(2), i, 1);
-                String Ten_NCC="SELECT Ten_Nha_CC FROM (Lo_San_Pham JOIN Phieu_nhap ON Lo_San_Pham.ID_Phieu_Nhap = Phieu_nhap.ID_Phieu_Nhap JOIN Nguon_CC ON Phieu_nhap.ID_CC = Nguon_CC.ID_CC JOIN Phieu_Tra_Hang ON Phieu_Tra_Hang.ID_Lo=Lo_San_Pham.ID_Lo)  WHERE Phieu_Tra_Hang.ID_Lo ="+rs.getInt(5)+";";
-                ResultSet rs_tenCC=accessDB.getInstance().excuteQuery(Ten_NCC);
-                try {
-                    rs_tenCC.next();
-                    model.setValueAt(rs_tenCC.getString(1), i, 2);
-                } 
-                catch (Exception e) {
-                    e.printStackTrace();
-                }
-                String tenSP="SELECT Ten_SP FROM San_Pham JOIN Lo_San_Pham ON San_Pham.id_sp = Lo_San_Pham.id_sp JOIN Phieu_tra_hang ON Phieu_tra_hang.id_lo = Lo_San_Pham.id_lo WHERE Phieu_tra_hang.id_lo ="+rs.getInt(5)+";";
-                ResultSet rs_tenSP=accessDB.getInstance().excuteQuery(tenSP);
-                try {
-                    rs_tenSP.next();
-                    model.setValueAt(rs_tenSP.getString(1), i, 3);
-                } 
-                catch (Exception e) {
-                    e.printStackTrace();
-                }
-                String sl="select So_luong_SP from (phieu_tra_hang join Lo_san_pham on phieu_tra_hang.id_lo=lo_san_pham.id_lo) where phieu_tra_hang.id_lo="+rs.getInt(5)+";";
-                ResultSet rs_sl=accessDB.getInstance().excuteQuery(sl);
-                try {
-                    rs_sl.next();
-                    model.setValueAt(rs_sl.getInt(1), i, 4);
-                } 
-                catch (Exception e) {
-                    e.printStackTrace();
-                }
-                String ten_nv="select ten_nv from nhan_vien where id_nv="+rs.getInt(4)+";";
-                ResultSet rs_tenNV=accessDB.getInstance().excuteQuery(ten_nv);
-                try {
-                    rs_tenNV.next();
-                    model.setValueAt(rs_tenNV.getString(1), i, 5);
-                } catch (Exception e) {
-                    e.printStackTrace();
-                }
+                model.setValueAt(rs.getString(3), i, 2);
+                model.setValueAt(rs.getString(4), i, 3);
+                model.setValueAt(rs.getInt(5), i, 4);
+                model.setValueAt(rs.getString(6), i, 5);
                 i++;
             }
-            
         } 
         catch (Exception e) {
             e.printStackTrace();
